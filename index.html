@@ -12,131 +12,12 @@
       name="keywords"
       content="GTA 5, FiveM, Towl, Zombie, War, Crypto, Bitcoin"
     />
-    <link href="css/slick_v_4.css" rel="stylesheet" />
+    <!-- <link href="css/slick_v_4.css" rel="stylesheet" /> -->
     <link href="css/main_v_4.css" rel="stylesheet" />
     <link href="css/fullpage_v_4.css" rel="stylesheet" />
     <link href="favicon.ico" rel="shortcut icon" />
-    <link href="css/themes/semantic.rtl.min_v_4.css" rel="stylesheet" />
-    <script src="js/jquery-1.11.3.min_v_4.js"></script>
-    <script src="js/fm.revealator.jquery.min_v_4.js"></script>
-    <script src="js/jquery-ui_v_4.js"></script>
+    <!-- <link href="css/themes/semantic.rtl.min_v_4.css" rel="stylesheet" /> -->
     <meta name="verification" content="" />
-    <script>
-      jQuery(function ($) {
-        var index = "qpsstats-active-tab";
-        var dataStore = window.sessionStorage;
-        var oldIndex = 0;
-
-        var tabs = $(".about_tabs");
-        var tabs_select = true;
-        var selector = $(".about_tabs").find(".slide__redage");
-        var activeItem = tabs.find(".about_tabs li .ui-state-active");
-        var activeWidth = activeItem.innerWidth();
-
-        $(".slide__redage").css({
-          left: activeItem.position.left + "px",
-          width: activeWidth + "px",
-        });
-
-        try {
-          oldIndex = dataStore.getItem(index);
-          $("#redage_slide").addClass("animated fadeInLeft tabs" + oldIndex);
-          $("#redage_slide").one(
-            "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-            function () {
-              $(this).removeClass("animated fadeInLeft");
-            }
-          );
-        } catch (e) {}
-
-        $("#tabs").tabs({
-          active: oldIndex,
-          hide: {
-            effect: "fade",
-            duration: 200,
-          },
-          show: {
-            function(event, ui) {
-              alert("2");
-            },
-            effect: "fade",
-            direction: "right",
-            duration: 200,
-          },
-          activate: function (event, ui) {
-            tabs_select = false;
-
-            var newIndex = ui.newTab.parent().children().index(ui.newTab);
-
-            $("#redage_slide").removeClass();
-            $("#redage_slide").addClass("animated fadeInLeft tabs" + newIndex);
-            $("#redage_slide").one(
-              "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-              function () {
-                $(this).removeClass("animated fadeInLeft");
-              }
-            );
-            var isn = $(".ui-tabs-active");
-            var activeWidth = isn.innerWidth();
-            var itemPos = isn.position();
-            $(".slide__redage").css({
-              left: itemPos.left + "px",
-              width: activeWidth + "px",
-            });
-
-            try {
-              dataStore.setItem(index, newIndex);
-            } catch (e) {}
-            tabs_select = true;
-          },
-        });
-
-        /* 	   $(".about_tabs").on("click","li",function(e){
-	if (tabs_select == true) {
-	 e.preventDefault();
-		 var activeWidth = $(this).innerWidth();
-		 var itemPos = $(this).position();
-		 $(".slide__redage").css({
-			 "left":itemPos.left + "px", 
-			 "width": activeWidth + "px"
-		 });
-		
-	}
-	 });
-				*/
-
-        window.onload = function () {
-          var elm = $(".revealator-slideright");
-          elm
-            .css("transform", "translate(0, 0)")
-            .css("opacity", "1")
-            .css("z-index", "1");
-        };
-
-        function slider_tabs() {
-          var elm = $(".ui-state-active");
-          var activeWidth = elm.innerWidth();
-          var itemPos = elm.position();
-          $(".slide__redage").css({
-            left: itemPos.left + "px",
-            width: activeWidth + "px",
-          });
-        }
-        window.onresize = function (event) {
-          slider_tabs();
-        };
-
-        slider_tabs();
-      });
-    </script>
-    <style>
-      .ajs-message.ajs-default_rd {
-        background: rgba(166, 166, 166, 0.65);
-        color: #fff;
-        border: none;
-        border-radius: 6px;
-      }
-    </style>
   </head>
 
   <body
@@ -145,9 +26,7 @@
   >
     <div id="p_prldr">
       <div class="contpre">
-        <span class="svg_anm"></span><br />Wait<br /><small
-          >Loading</small
-        >
+        <span class="svg_anm"></span><br />The Ones Who Live<br /><small>Loading</small>
       </div>
     </div>
     <div class="layout__header">
@@ -602,7 +481,12 @@
                   <ul class="md_l contact_blc">
                     <li class="contact">
                       <a href="#" target="_blank"
-                        ><img alt="fb" class="img" src="images/fb.png"  style="width: 76px;"/>
+                        ><img
+                          alt="fb"
+                          class="img"
+                          src="images/fb.png"
+                          style="width: 76px"
+                        />
                         <div class="grow">
                           <div class="h">Facebook page</div>
                           <p>All the main news regarding the project.</p>
@@ -612,7 +496,12 @@
                     </li>
                     <li class="contact">
                       <a href="#" target="_blank"
-                        ><img alt="fb" class="img" src="images/fb.png" style="width: 76px;"/>
+                        ><img
+                          alt="fb"
+                          class="img"
+                          src="images/fb.png"
+                          style="width: 76px"
+                        />
                         <div class="grow">
                           <div class="h">Facebook Group</div>
                           <p>
@@ -643,9 +532,7 @@
                       </a>
                     </li>
                     <li class="contact">
-                      <a
-                        href="#"
-                        target="_blank"
+                      <a href="#" target="_blank"
                         ><img
                           alt="discord"
                           class="img"
@@ -654,7 +541,8 @@
                         <div class="grow">
                           <div class="h">Discord channel</div>
                           <p>
-                            Find friends from the game and be the first to know all the news.
+                            Find friends from the game and be the first to know
+                            all the news.
                           </p>
                         </div>
                         <div class="btn btn_rond_orange">Connect</div>
@@ -686,18 +574,21 @@
         </div>
       </div>
     </div>
-    <link href="css/slick-theme_v_4.css" rel="stylesheet" />
+    <!-- <link href="css/slick-theme_v_4.css" rel="stylesheet" /> -->
     <link href="css/fm.revealator.jquery_v_4.css" rel="stylesheet" />
     <link href="css/animate_v_4.css" rel="stylesheet" />
-    <link href="css/magnific-popup_v_4.css" rel="stylesheet" />
-    <link href="css/alertify.min_v_4.css" rel="stylesheet" />
-    <script src="js/alertify.min_v_4.js"></script>
+    <!-- <link href="css/magnific-popup_v_4.css" rel="stylesheet" /> -->
+    <!-- <link href="css/alertify.min_v_4.css" rel="stylesheet" />
+    <script src="js/alertify.min_v_4.js"></script> -->
+    <!-- <script src="js/jquery-1.11.3.min_v_4.js"></script> -->
     <script src="js/jquery_v_4.js"></script>
+    <script src="js/jquery-ui_v_4.js"></script>
+    <script src="js/fm.revealator.jquery.min_v_4.js"></script>
     <script src="js/fastmark_v_4.js"></script>
     <script src="js/fullpage_v_4.js"></script>
     <script src="js/parallax_v_4.js"></script>
     <script src="js/main_v_4.js"></script>
-    <script src="js/slick.min_v_4.js"></script>
+    <!-- <script src="js/slick.min_v_4.js"></script> -->
     <script src="js/jquery.magnific-popup_v_4.js"></script>
     <script>
       $(document).ready(function () {
@@ -712,21 +603,6 @@
           // resize on page load
           .each(resizeInput);
       });
-
-      function CopyToClipboard(containerid) {
-        var ct = $("#" + containerid + " span");
-        var a = $("#" + containerid + " a");
-        var prevHtml = a.html();
-        var $temp = $("<input style='opacity:0;'>");
-        $("body").append($temp);
-        $temp.val(ct.text()).select();
-        document.execCommand("copy");
-        $temp.remove();
-        a.text("Скопирован!");
-        setTimeout(function () {
-          $("#" + containerid + " a").text(prevHtml);
-        }, 700);
-      }
     </script>
 
     <script>
@@ -735,6 +611,115 @@
           $svg_anm = $preloader.find(".svg_anm");
         $svg_anm.fadeOut();
         $preloader.delay(500).fadeOut("slow");
+      });
+    </script>
+
+    <script>
+      jQuery(function ($) {
+        var index = "qpsstats-active-tab";
+        var dataStore = window.sessionStorage;
+        var oldIndex = 0;
+
+        var tabs = $(".about_tabs");
+        var tabs_select = true;
+        var selector = $(".about_tabs").find(".slide__redage");
+        var activeItem = tabs.find(".about_tabs li .ui-state-active");
+        var activeWidth = activeItem.innerWidth();
+
+        $(".slide__redage").css({
+          left: activeItem.position.left + "px",
+          width: activeWidth + "px",
+        });
+
+        try {
+          oldIndex = dataStore.getItem(index);
+          $("#redage_slide").addClass("animated fadeInLeft tabs" + oldIndex);
+          $("#redage_slide").one(
+            "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
+            function () {
+              $(this).removeClass("animated fadeInLeft");
+            }
+          );
+        } catch (e) {}
+
+        $("#tabs").tabs({
+          active: oldIndex,
+          hide: {
+            effect: "fade",
+            duration: 200,
+          },
+          show: {
+            function(event, ui) {
+              alert("2");
+            },
+            effect: "fade",
+            direction: "right",
+            duration: 200,
+          },
+          activate: function (event, ui) {
+            tabs_select = false;
+
+            var newIndex = ui.newTab.parent().children().index(ui.newTab);
+
+            $("#redage_slide").removeClass();
+            $("#redage_slide").addClass("animated fadeInLeft tabs" + newIndex);
+            $("#redage_slide").one(
+              "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
+              function () {
+                $(this).removeClass("animated fadeInLeft");
+              }
+            );
+            var isn = $(".ui-tabs-active");
+            var activeWidth = isn.innerWidth();
+            var itemPos = isn.position();
+            $(".slide__redage").css({
+              left: itemPos.left + "px",
+              width: activeWidth + "px",
+            });
+
+            try {
+              dataStore.setItem(index, newIndex);
+            } catch (e) {}
+            tabs_select = true;
+          },
+        });
+
+        /* 	   $(".about_tabs").on("click","li",function(e){
+if (tabs_select == true) {
+e.preventDefault();
+ var activeWidth = $(this).innerWidth();
+ var itemPos = $(this).position();
+ $(".slide__redage").css({
+   "left":itemPos.left + "px", 
+   "width": activeWidth + "px"
+ });
+
+}
+});
+    */
+
+        window.onload = function () {
+          var elm = $(".revealator-slideright");
+          elm
+            .css("transform", "translate(0, 0)")
+            .css("opacity", "1")
+            .css("z-index", "1");
+        };
+
+        function slider_tabs() {
+          var elm = $(".ui-state-active");
+          var activeWidth = elm.innerWidth();
+          var itemPos = elm.position();
+          $(".slide__redage").css({
+            left: itemPos.left + "px",
+            width: activeWidth + "px",
+          });
+        }
+        window.onresize = function (event) {
+          slider_tabs();
+        };
+
+        slider_tabs();
       });
     </script>
     <div id="fp-nav">
