@@ -2,6 +2,7 @@ html, body {
 	border: 0;
 	margin: 0;
 	padding: 0;
+	overflow-y: hiden;
 }
 div, span, object, iframe, img, table, caption, thead, tbody, tfoot, tr, tr, td, article, aside, canvas, details, figure, hgroup, menu, nav, footer, header, section, summary, mark, audio, video {
 	border: 0;
@@ -2032,18 +2033,24 @@ _ .wrapper.slide__home {
 	font-family: UniNeueHeavy;
 	font-size: 50px;
 }
+
+@media screen and (max-width: 1048px) {
+	/* hiden tabs */
+	.tabs0, .tabs1, .tabs2, .tabs3 {
+		display: none;
+	}
+}
+
 .tabs0:before, .tabs1:before, .tabs2:before, .tabs3:before {
 	position: absolute;
-	background: url('../images/slide/z.png');
-	content: "";
-	z-index: 0;
-	left: -312px;
-	top: -212px;
-	min-width: 920px;
-	min-height: 436px;
-	width: 100%;
-	height: 100%;
-	background-size: 100%;
+    background: url(../images/slide/z.png);
+    content: "";
+    z-index: 0;
+    left: 0;
+    top: 183px;
+    width: 920px;
+    height: 436px;
+    background-size: 100%;
 }
 .tabs0:after {
 	background: url('../images/slide/tabs1.png');
@@ -2053,15 +2060,14 @@ _ .wrapper.slide__home {
 	height: 100%;
 	position: absolute;
 	margin: auto;
-	left: -85px;
-	right: 0;
+	left: -218px;
 	top: 0;
 	bottom: -200px;
 	width: 100%;
 	background-size: cover;
-	min-width: 646px;
-	min-height: 967px;
-	z-index: 1;
+	max-width: 646px;
+	max-height: 967px;
+	z-index: 0;
 }
 .tabs1:after {
 	background: url('../images/slide/tabs2.png');
@@ -4411,4 +4417,15 @@ flex-direction: row;
     position: absolute;
     bottom: -15vw;
     pointer-events: none;
+}
+
+.slide_arrow_wrapper {
+	text-align: center;
+	margin-top: 50px;
+}
+
+/* Circle button transparent */
+.glide__bullet_size {
+	width: 20px !important;
+	height: 20px !important;
 }
