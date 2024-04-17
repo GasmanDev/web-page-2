@@ -583,118 +583,117 @@
     <div id="fp-nav">
       <ul></ul>
     </div>
-  </body>
-  <!-- <link href="css/slick-theme_v_4.css" rel="stylesheet" /> -->
+    <!-- <link href="css/slick-theme_v_4.css" rel="stylesheet" /> -->
 
-  <!-- <link href="css/animate_v_4.css" rel="stylesheet" /> -->
-  <!-- <link href="css/magnific-popup_v_4.css" rel="stylesheet" /> -->
-  <!-- <link href="css/alertify.min_v_4.css" rel="stylesheet" />
+    <!-- <link href="css/animate_v_4.css" rel="stylesheet" /> -->
+    <!-- <link href="css/magnific-popup_v_4.css" rel="stylesheet" /> -->
+    <!-- <link href="css/alertify.min_v_4.css" rel="stylesheet" />
     <script src="js/alertify.min_v_4.js"></script> -->
-  <!-- <script src="js/jquery-1.11.3.min_v_4.js"></script> -->
-  <!-- <script src="js/jquery_v_4.js"></script> -->
+    <!-- <script src="js/jquery-1.11.3.min_v_4.js"></script> -->
+    <!-- <script src="js/jquery_v_4.js"></script> -->
 
-  <script src="js/fm.revealator.jquery.min_v_4.js"></script>
-  <script src="js/fastmark_v_4.js"></script>
-  <script src="js/fullpage.js"></script>
-  <script src="js/parallax_v_4.js"></script>
-  <script src="js/main_v_4.js"></script>
-  <!-- <script src="js/slick.min_v_4.js"></script> -->
-  <script src="js/jquery.magnific-popup_v_4.js"></script>
-  <script>
-    $(document).ready(function () {
-      function resizeInput() {
-        $(this).attr("size", $(this).val().length);
-        $("#ok").text($(this).val());
-      }
+    <script src="js/fm.revealator.jquery.min_v_4.js"></script>
+    <script src="js/fastmark_v_4.js"></script>
+    <script src="js/fullpage.js"></script>
+    <script src="js/parallax_v_4.js"></script>
+    <script src="js/main_v_4.js"></script>
+    <!-- <script src="js/slick.min_v_4.js"></script> -->
+    <script src="js/jquery.magnific-popup_v_4.js"></script>
+    <script>
+      $(document).ready(function () {
+        function resizeInput() {
+          $(this).attr("size", $(this).val().length);
+          $("#ok").text($(this).val());
+        }
 
-      $(".width-dynamic")
-        // event handler
-        .keyup(resizeInput)
-        // resize on page load
-        .each(resizeInput);
-    });
-  </script>
-
-  <script>
-    $(window).on("load", function () {
-      var $preloader = $("#p_prldr"),
-        $svg_anm = $preloader.find(".svg_anm");
-      $svg_anm.fadeOut();
-      $preloader.delay(500).fadeOut("slow");
-    });
-  </script>
-
-  <script>
-    jQuery(function ($) {
-      var index = "qpsstats-active-tab";
-      var dataStore = window.sessionStorage;
-      var oldIndex = 0;
-
-      var tabs = $(".about_tabs");
-      var tabs_select = true;
-      var selector = $(".about_tabs").find(".slide__redage");
-      var activeItem = tabs.find(".about_tabs li .ui-state-active");
-      var activeWidth = activeItem.innerWidth();
-
-      $(".slide__redage").css({
-        left: activeItem.position.left + "px",
-        width: activeWidth + "px",
+        $(".width-dynamic")
+          // event handler
+          .keyup(resizeInput)
+          // resize on page load
+          .each(resizeInput);
       });
+    </script>
 
-      try {
-        oldIndex = dataStore.getItem(index);
-        $("#redage_slide").addClass("animated fadeInLeft tabs" + oldIndex);
-        $("#redage_slide").one(
-          "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-          function () {
-            $(this).removeClass("animated fadeInLeft");
-          }
-        );
-      } catch (e) {}
+    <script>
+      $(window).on("load", function () {
+        var $preloader = $("#p_prldr"),
+          $svg_anm = $preloader.find(".svg_anm");
+        $svg_anm.fadeOut();
+        $preloader.delay(500).fadeOut("slow");
+      });
+    </script>
 
-      $("#tabs").tabs({
-        active: oldIndex,
-        hide: {
-          effect: "fade",
-          duration: 200,
-        },
-        show: {
-          function(event, ui) {
-            alert("2");
-          },
-          effect: "fade",
-          direction: "right",
-          duration: 200,
-        },
-        activate: function (event, ui) {
-          tabs_select = false;
+    <script>
+      jQuery(function ($) {
+        var index = "qpsstats-active-tab";
+        var dataStore = window.sessionStorage;
+        var oldIndex = 0;
 
-          var newIndex = ui.newTab.parent().children().index(ui.newTab);
+        var tabs = $(".about_tabs");
+        var tabs_select = true;
+        var selector = $(".about_tabs").find(".slide__redage");
+        var activeItem = tabs.find(".about_tabs li .ui-state-active");
+        var activeWidth = activeItem.innerWidth();
 
-          $("#redage_slide").removeClass();
-          $("#redage_slide").addClass("animated fadeInLeft tabs" + newIndex);
+        $(".slide__redage").css({
+          left: activeItem.position.left + "px",
+          width: activeWidth + "px",
+        });
+
+        try {
+          oldIndex = dataStore.getItem(index);
+          $("#redage_slide").addClass("animated fadeInLeft tabs" + oldIndex);
           $("#redage_slide").one(
             "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
             function () {
               $(this).removeClass("animated fadeInLeft");
             }
           );
-          var isn = $(".ui-tabs-active");
-          var activeWidth = isn.innerWidth();
-          var itemPos = isn.position();
-          $(".slide__redage").css({
-            left: itemPos.left + "px",
-            width: activeWidth + "px",
-          });
+        } catch (e) {}
 
-          try {
-            dataStore.setItem(index, newIndex);
-          } catch (e) {}
-          tabs_select = true;
-        },
-      });
+        $("#tabs").tabs({
+          active: oldIndex,
+          hide: {
+            effect: "fade",
+            duration: 200,
+          },
+          show: {
+            function(event, ui) {
+              alert("2");
+            },
+            effect: "fade",
+            direction: "right",
+            duration: 200,
+          },
+          activate: function (event, ui) {
+            tabs_select = false;
 
-      /* 	   $(".about_tabs").on("click","li",function(e){
+            var newIndex = ui.newTab.parent().children().index(ui.newTab);
+
+            $("#redage_slide").removeClass();
+            $("#redage_slide").addClass("animated fadeInLeft tabs" + newIndex);
+            $("#redage_slide").one(
+              "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
+              function () {
+                $(this).removeClass("animated fadeInLeft");
+              }
+            );
+            var isn = $(".ui-tabs-active");
+            var activeWidth = isn.innerWidth();
+            var itemPos = isn.position();
+            $(".slide__redage").css({
+              left: itemPos.left + "px",
+              width: activeWidth + "px",
+            });
+
+            try {
+              dataStore.setItem(index, newIndex);
+            } catch (e) {}
+            tabs_select = true;
+          },
+        });
+
+        /* 	   $(".about_tabs").on("click","li",function(e){
 if (tabs_select == true) {
 e.preventDefault();
  var activeWidth = $(this).innerWidth();
@@ -708,28 +707,29 @@ e.preventDefault();
 });
     */
 
-      window.onload = function () {
-        var elm = $(".revealator-slideright");
-        elm
-          .css("transform", "translate(0, 0)")
-          .css("opacity", "1")
-          .css("z-index", "1");
-      };
+        window.onload = function () {
+          var elm = $(".revealator-slideright");
+          elm
+            .css("transform", "translate(0, 0)")
+            .css("opacity", "1")
+            .css("z-index", "1");
+        };
 
-      function slider_tabs() {
-        var elm = $(".ui-state-active");
-        var activeWidth = elm.innerWidth();
-        var itemPos = elm.position();
-        $(".slide__redage").css({
-          left: itemPos.left + "px",
-          width: activeWidth + "px",
-        });
-      }
-      window.onresize = function (event) {
+        function slider_tabs() {
+          var elm = $(".ui-state-active");
+          var activeWidth = elm.innerWidth();
+          var itemPos = elm.position();
+          $(".slide__redage").css({
+            left: itemPos.left + "px",
+            width: activeWidth + "px",
+          });
+        }
+        window.onresize = function (event) {
+          slider_tabs();
+        };
+
         slider_tabs();
-      };
-
-      slider_tabs();
-    });
-  </script>
+      });
+    </script>
+  </body>
 </html>
