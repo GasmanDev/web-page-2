@@ -17,6 +17,15 @@
     <link href="css/fullpage_v_4.css" rel="stylesheet" />
     <link href="favicon.ico" rel="shortcut icon" />
     <link href="css/fm.revealator.jquery_v_4.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.css"
+    />
   </head>
 
   <body
@@ -177,34 +186,14 @@
                 <div class="slide-main__about" data-depth="0.2"></div>
               </div>
             </div>
+
             <div class="slide-content slide-content_about container">
               <div class="about-the-project slide-content__content wrapper">
-                <div
-                  class="about-the-project__main slide-content__content-main slide-content__content-main_max-width container__about"
-                >
-                  <div class="slide_tabs tabs0" id="redage_slide"></div>
-                </div>
-                <div class="slide-content__content-side">
-                  <div class="about_tabs" id="tabs">
-                    <ul>
-                      <li class="tabs-1">
-                        <a href="index.html#tabs-1"><span></span></a>
-                      </li>
-                      <li class="tabs-2">
-                        <a href="index.html#tabs-2"><span></span></a>
-                      </li>
-                      <li class="tabs-3">
-                        <a href="index.html#tabs-3"><span></span></a>
-                      </li>
-                      <li class="tabs-4">
-                        <a href="index.html#tabs-4"><span></span></a>
-                      </li>
-                      <li id="slider"><span class="slide__redage"></span></li>
-                    </ul>
-                    <div class="tabs-container-wrapper">
-                      <div class="tabs-container">
-                        <div id="tabs-1">
-                          <div class="h_tabs">FIGHT FOR YOUR LIFE</div>
+                <div class="glide">
+                  <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                      <li class="glide__slide">
+                        <div class="h_tabs">FIGHT FOR YOUR LIFE</div>
                           <p>
                             <b>PVP: </b>Challenge yourself with intense,
                             exhilarating PvP fighting with the greatest soldier
@@ -222,9 +211,9 @@
                             and only the bravest survivors can triumph over
                             them!
                           </p>
-                        </div>
-                        <div id="tabs-2">
-                          <div class="h_tabs">PLAYER-DRIVEN ECONOMY</div>
+                      </li>
+                      <li class="glide__slide">
+                        <div class="h_tabs">PLAYER-DRIVEN ECONOMY</div>
                           <p>
                             <b>DISCOVER, GATHER, HUNT: </b>
                             To erect the greatest empire and smith the most
@@ -248,56 +237,43 @@
                             plenty of traders await you there, and you’re sure
                             to find what you’re looking for!
                           </p>
-                        </div>
-                        <div id="tabs-3">
-                          <div class="h_tabs">A DANGEROUS WORLD</div>
-                          <p>
-                            <b>The Zombie:</b> Zombies are a constant threat,
-                            relentless and cunning, always ready to attack
-                            survivors. Players must be vigilant and prepared to
-                            face them at any moment. Survival depends on quick
-                            reflexes, sharpshooting skills, and effective
-                            teamwork against these formidable foes.
-                          </p>
-                          <p>
-                            <b>The Bandit:</b> Bandits are the ruthless
-                            scavengers of the wasteland, thriving in the chaos
-                            of the post-apocalyptic world. Armed with cunning
-                            tactics and a disregard for morality, they prey on
-                            unsuspecting survivors, raiding settlements and
-                            ambushing travelers for their resources. With no
-                            allegiance but to themselves, bandits are a constant
-                            threat to anyone daring to venture into their
-                            territory. Survivors must remain vigilant and
-                            prepared to defend themselves against these
-                            dangerous adversaries if they hope to survive in the
-                            unforgiving world of TOWL.
-                          </p>
-                        </div>
-                        <div id="tabs-4">
-                          <div class="h_tabs">REAL ESTATE</div>
-                          <p>
-                            Build a house, then set it up in style! Comfy beds,
-                            tables laden with food, hunting trophies, chests to
-                            store your valuables... Grow your collection of
-                            furniture and decorations to make your house a home.
-                          </p>
-                        </div>
-                        <div class="button">
-                          <a
-                            class="btn gradient_btn__orange btn__tabs"
-                            href="#"
-                            target="_blank"
-                            >Find out more</a
-                          >
-                          <a
-                            class="btn btn_rond_orange btn__tabs modal-video-redage"
-                            href="#"
-                            >Video about the project</a
-                          >
-                        </div>
-                      </div>
-                    </div>
+                      </li>
+                      <li class="glide__slide"><div class="h_tabs">A DANGEROUS WORLD</div>
+                        <p>
+                          <b>The Zombie:</b> Zombies are a constant threat,
+                          relentless and cunning, always ready to attack
+                          survivors. Players must be vigilant and prepared to
+                          face them at any moment. Survival depends on quick
+                          reflexes, sharpshooting skills, and effective
+                          teamwork against these formidable foes.
+                        </p>
+                        <p>
+                          <b>The Bandit:</b> Bandits are the ruthless
+                          scavengers of the wasteland, thriving in the chaos
+                          of the post-apocalyptic world. Armed with cunning
+                          tactics and a disregard for morality, they prey on
+                          unsuspecting survivors, raiding settlements and
+                          ambushing travelers for their resources. With no
+                          allegiance but to themselves, bandits are a constant
+                          threat to anyone daring to venture into their
+                          territory. Survivors must remain vigilant and
+                          prepared to defend themselves against these
+                          dangerous adversaries if they hope to survive in the
+                          unforgiving world of TOWL.
+                        </p></li>
+                    </ul>
+                  </div>
+                  <div class="glide__arrows" data-glide-el="controls">
+                    <button
+                      data-glide-dir="<"
+                    >
+                      prev
+                    </button>
+                    <button
+                      data-glide-dir=">"
+                    >
+                      next
+                    </button>
                   </div>
                 </div>
               </div>
@@ -614,6 +590,14 @@
           $svg_anm = $preloader.find(".svg_anm");
         $svg_anm.fadeOut();
         $preloader.delay(500).fadeOut("slow");
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+
+    <script>
+      window.addEventListener("load", function () {
+        new Glide(".glide").mount();
       });
     </script>
   </body>
